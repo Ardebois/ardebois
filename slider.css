@@ -3,22 +3,22 @@
 	text-align: center;
 	}
 	#slider {
-	position: relative;
-	width: 80%;
-	margin: auto;
-	display: flex;
-	align-items: center;
+		position: relative;
+		width: 80%;
+		margin: auto;
+		display: flex;
+		align-items: center;
 	}
 	#precedent,
 	#suivant {
-	cursor: pointer;
-	transition: opacity 0.3s ease;
-	opacity: 0;
-	position: absolute;
-	font-size: 100px;
-	color: rgba(220, 220, 220, 0.8);
-	background-color: rgba(0, 0, 0, 0.8);
-	padding: 10px;
+		cursor: pointer;
+		transition: opacity 0.3s ease;
+		opacity: 0;
+		position: absolute;
+		font-size: 50px;
+		color: rgba(220, 220, 220, 0.8);
+		background-color: rgba(0, 0, 0, 0.8);
+		padding: 5px;
 	}
 	#precedent {
 	left: 0;
