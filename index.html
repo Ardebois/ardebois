@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
     <div id="top"> 
     <meta charset="UTF-8">
     <title>Ardebois</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/cayman.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-        <link rel="stylesheet" href="slider.css">
-    <script src="slider.js"></script>
+    
+    
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="./freewall/freewall.js"></script>
+
+    <style type="text/css">
+      .free-wall {
+        margin: 15px;
+      }
+    </style>
+
+
 
   </head>
   <body>
@@ -23,8 +37,16 @@
       <a href="#contact" class="btn">Contact</a>
     </section>
 
+
+
+
+
+
     <section class="main-content">
      
+
+
+     <!-- ------------------------------------------------------------------------  -->
       <div id="presentation"> 
 
           <BR>
@@ -46,96 +68,89 @@
 
 
 
-<BR>
-<BR>
-
-<BR>
-<BR>
-
-  <div id="reals">
-
-    <br><br><br><br><br>
-              Quelques réalisations en images : 
-          <BR>
+<!-- ------------------------------------------------------------------------  -->
 
 
-    <div id="slider">
+<div id="reals">
+  <br><br><br><br><br>
+          Voici quelques réalisations Ardebois.
+          <br>
 
-      <BR>
-      <BR>
-      <BR>
-      <BR>
-
-
-        <img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG-20200912-WA0020.jpg" alt="Réalisations" id="slide">
-        <div id="precedent" onclick="ChangeSlide(-1)"><</div>
-        <div id="suivant" onclick="ChangeSlide(1)">></div>
-    </div>
-<br><br><br>
-<hr>
-    <a href="#top">Retour </a>
 </div>
 
-<!-- 
-      <p>Quelques petites images.</p>
-
-      <p><a href="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG-20200912-WA0020.jpg" target="_blank"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG-20200912-WA0020.jpg" alt="" style="max-width:20%;"></a>
-
-      <a href="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG-20220309-WA0001.jpg" target="_blank"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG-20220309-WA0001.jpg" alt="" style="max-width:20%;"></a>
-
-      <a href="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG_20211223_192153.jpg" target="_blank"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG_20211223_192153.jpg" alt="" style="max-width:20%;"></a>
-
-      <a href="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG_20220526_180352.jpg" target="_blank"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG_20220526_180352.jpg" alt="" style="max-width:20%;"></a></p>
+<div id="freewall" class="free-wall">
+</div>
 
 
 
+<script type="text/javascript">
+      var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(images/compressed/{index}.jpg)'></div>";
+      var w = 1, html = '', limitItem = 13;
+      for (var i = 0; i < limitItem; ++i) {
+        w = 200 +  200 * Math.random() << 0;
+        html += temp.replace(/\{height\}/g, 200).replace(/\{width\}/g, w).replace("{index}", i + 1);
+      }
+      $("#freewall").html(html);
 
-      <p>Quelques grandes images.</p>
+      var wall = new Freewall("#freewall");
+      wall.reset({
+        selector: '.cell',
+        animate: true,
+        cellW: 20,
+        cellH: 400,
+        onResize: function() {
+          wall.fitWidth();
+        }
+      });
+      wall.fitWidth();
+      // for scroll bar appear;
+      $(window).trigger("resize");
+</script>
 
-      <p><a href="https://github.com/Ardebois/ardebois/raw/main/images/IMG_20210404_111404.jpg" target="_blank"><img src="https://github.com/Ardebois/ardebois/raw/main/images/IMG_20210404_111404.jpg" alt="" style="max-width:100%;"></a></p>
 
+<!--  <div id="reals">
+
+                  <br><br><br><br><br>
+                            Quelques réalisations en images : 
+                        <BR>
+
+
+                  <div id="slider">
+
+                      <img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/images/IMG-20200912-WA0020.jpg" alt="Réalisations" id="slide">
+                      <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+                      <div id="suivant" onclick="ChangeSlide(1)">></div>
+                  </div>
+
+
+
+
+                  <br><br><br>
+                  <hr>
+                      <a href="#top">Retour </a>
+  </div> 
 -->
 
-<BR>
-<BR>
-<BR>
-<BR>
 
+
+</section>
+
+
+<!-- ------------------------------------------------------------------------  -->
       <div id="contact" > 
-        <BR>
-<BR>
 
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-
-        <b>
-          <p>
-            
-            <!--<img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/medias/bottom_contact_bg.png" alt="" style="max-width:100%;"> -->
-
-              <br>
-             
-          </p>
-        </b>
       </div>
 
-    </section>
+                
 
 
-          <section class="page-header">
-      <h1 > Pour toute information, ou devis : <br> </h1>
-      <h1 class="project-name"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/medias/bottom_contact_bg_centered.png"  style="max-width:55%;"></a></h1>
-      <hr>
- <a href="#top">Retour </a>
-    </section>
+                      <section class="page-header">
+                  <h1 > Pour toute information, ou devis : <br> </h1>
+                  <h1 class="project-name"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/medias/bottom_contact_bg_centered.png"  style="max-width:100%;"></a></h1>
+                  <hr>
+             <a href="#top">Retour </a>
+                </section>
 
-
-<BR>
-<BR>
 
 
 
