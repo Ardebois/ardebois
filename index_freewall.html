@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+
+
+
+
+  <head>
+
+    <div id="top"> 
+    <title>Ardebois</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="./freewall/freewall.js"></script>
+
+
+
+
+    <style type="text/css">
+      .free-wall {
+        margin: 15px;
+      }
+    </style>
+
+
+  </head>
+
+
+
+
+
+
+  <body>
+
+<!-- section header -->
+    <section class="page-header">
+      <h1 class="project-name"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/medias/accueilSite.png" alt="" style="max-width:55%;"></a></h1>
+      <h2 class="project-tagline">Mobilier, Agencement, Créations personnalisées. Interieur - Exterieur </h2>
+      <a href="#presentation" class="btn">Présentation</a>
+      <a href="#reals" class="btn">Réalisations</a>
+      <a href="#contact" class="btn">Contact</a>
+    </section>
+
+
+<!-- section main-content -->
+    <section class="main-content">
+     
+      <div id="presentation"> 
+
+          <BR>
+          <BR>
+          <BR>
+
+          <img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/medias/menuiserie-froment_home-header.jpg" alt="" style="max-width:100%;">
+
+          <br><br><br><br><br>
+          Un artisan à votre service pour tous travaux neuf et rénovation, <br>création personnalisée de mobilier sur mesure, agencement.
+
+          <BR>
+          <BR>
+                  <br>
+                  <hr>
+          <a href="#top">Retour </a>
+          <br><br><br><br>
+      </div>
+
+
+
+      <BR>
+      <BR>
+
+      <BR>
+      <BR>
+</section>
+
+
+
+
+
+
+    <br><br><br><br><br>
+              Quelques réalisations en images : 
+          <BR>
+
+
+
+    <div id="freewall" class="free-wall"></div>
+
+
+
+<script type="text/javascript">
+      var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(images/compressed/{index}.jpg)'></div>";
+      var w = 1, html = '', limitItem = 49;
+      for (var i = 0; i < limitItem; ++i) {
+        w = 200 +  200 * Math.random() << 0;
+        html += temp.replace(/\{height\}/g, 200).replace(/\{width\}/g, w).replace("{index}", i + 1);
+      }
+      $("#freewall").html(html);
+
+      var wall = new Freewall("#freewall");
+      wall.reset({
+        selector: '.cell',
+        animate: true,
+        cellW: 50,
+        cellH: 50,
+        onResize: function() {
+          wall.fitWidth();
+        }
+      });
+      wall.fitWidth();
+      // for scroll bar appear;
+      $(window).trigger("resize");
+</script>
+
+
+
+
+
+
+
+
+      <div id="contact" > 
+        <BR>
+      </div>
+
+   
+
+
+          <section class="page-header">
+      <h1 > Pour toute information, ou devis : <br> </h1>
+      <h1 class="project-name"><img src="https://raw.githubusercontent.com/Ardebois/ardebois/main/medias/bottom_contact_bg_centered.png"></a></h1>
+      <hr>
+ <a href="#top">Retour </a>
+    </section>
+
+
+<BR>
+<BR>
+
+
+
+
+  </body>
+</html>
