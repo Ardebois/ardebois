@@ -85,7 +85,7 @@
 
 <script type="text/javascript">
       var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(images/compressed/{index}.jpg)'></div>";
-      var w = 1, html = '', limitItem = 13;
+      var w = 1, html = '', limitItem = 20;
       for (var i = 0; i < limitItem; ++i) {
         w = 200 +  200 * Math.random() << 0;
         html += temp.replace(/\{height\}/g, 200).replace(/\{width\}/g, w).replace("{index}", i + 1);
