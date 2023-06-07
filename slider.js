@@ -1,5 +1,9 @@
 var slide = new Array(
 
+	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/escalier01.jpg"
+	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/escalier02.jpg"
+	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/escalier03.jpg"
+	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/escalier04.jpg"
 	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/IMG-20200912-WA0020.jpg", 
 	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/IMG-20220309-WA0001.jpg", 
 	"https://raw.githubusercontent.com/Ardebois/ardebois/main/images/compressed/IMG_20220526_180352.jpg",
