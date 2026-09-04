@@ -188,10 +188,11 @@ img {
   font-family: var(--font-primary);
   font-weight: 600;
   color: var(--dark);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius-sm);
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .nav-list a:hover {
@@ -415,9 +416,10 @@ img {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
+  width: 100%;
 }
 
 .service-card {
@@ -751,6 +753,8 @@ img {
 .footer-links a {
   color: var(--white);
   font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .footer-links a:hover {
@@ -840,12 +844,6 @@ img {
   
   .presentation-image {
     margin-top: var(--spacing-md);
-  }
-}
-
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
