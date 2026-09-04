@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mentions légales du site Ardebois - Mobilier sur mesure en Ardèche">
+  <title>Mentions Légales - Ardebois</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/modern-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="/">
+          <img src="medias/accueilSite.png" alt="Logo Ardebois" width="200">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-toggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-list">
+          <li><a href="/#presentation">Présentation</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#reals">Réalisations</a></li>
+          <li><a href="/#contact" class="btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Mentions Légales</h1>
+        
+        <div class="legal-content">
+          <h2>Éditeur du site</h2>
+          <p><strong>Nom :</strong> Ardebois</p>
+          <p><strong>Adresse :</strong> Larnas, Sud Ardèche (07220), France</p>
+          <p><strong>Email :</strong> contact@ardebois.fr</p>
+          <p><strong>Téléphone :</strong> +33 (0)6 XX XX XX XX</p>
+          
+          <h2>Hébergement</h2>
+          <p>Ce site est hébergé par GitHub Pages.</p>
+          <p><strong>GitHub, Inc.</strong></p>
+          <p>88 Colin P Kelly Jr St</p>
+          <p>San Francisco, CA 94107</p>
+          <p>États-Unis</p>
+          
+          <h2>Propriété intellectuelle</h2>
+          <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle.</p>
+          <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de l'éditeur.</p>
+          <p>L'utilisation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+          
+          <h2>Responsabilité</h2>
+          <p>Les informations et documents du site sont fournis à titre indicatif et ne sauraient engager la responsabilité de l'éditeur.</p>
+          <p>L'éditeur ne saurait être tenu responsable des dommages directs et indirects consécutifs à l'accès au site.</p>
+          
+          <h2>Liens hypertextes</h2>
+          <p>Le site peut contenir des liens vers d'autres sites internet. L'éditeur ne saurait être tenu responsable des contenus, publicités, produits ou services disponibles sur ou à partir de ces sites.</p>
+          
+          <h2>Protection des données personnelles</h2>
+          <p>Pour en savoir plus sur la manière dont nous traitons vos données personnelles, veuillez consulter notre <a href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+          
+          <h2>Droit applicable et attribution de juridiction</h2>
+          <p>Tout litige en relation avec l'utilisation du site est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Larnas.</p>
+          
+          <p class="last-updated">Dernière mise à jour : 4 septembre 2024</p>
+        </div>
+        
+        <div class="back-link">
+          <a href="/" class="btn btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="medias/accueilSite.png" alt="Logo Ardebois" width="150">
+      </div>
+      <div class="footer-links">
+        <a href="/#presentation">Présentation</a>
+        <a href="/#services">Services</a>
+        <a href="/#reals">Réalisations</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="footer-legal">
+        <p>© 2024 Ardebois. Tous droits réservés.</p>
+        <p>
+          <a href="mentions-legales.html">Mentions légales</a> | 
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton retour en haut -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Menu mobile
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    mobileMenuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      mobileMenuToggle.innerHTML = navList.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('active');
+        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Bouton retour en haut
+    const backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

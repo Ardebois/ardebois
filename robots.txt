@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ardebois.fr/sitemap.xml
+
+# Autoriser l'indexation de tout le site
+Disallow: /freewall/
+Disallow: /js/
+Disallow: /css/
+
+# Delay pour éviter de surcharger le serveur
+Crawl-delay: 2
